@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+
+body {
+    background-color: rgb(228, 238, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+#header {
+    grid-column: 1 / span 1;
+
+    background-color: white;
+    display: grid;
+    grid-template-columns: 59% 40%;
+    grid-template-rows: 99%;
+    min-height: 60px;
+}
+
+#navbar {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 32% 32% 32%;
+    column-gap: 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+.nav-items {
+    font-size: 1.5vw;
+    color: black;
+}
+
+.navParent {
+    grid-row: 2 / span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+
+    background: none;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logout {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+
+    background: none;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+#help {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#paymentForm {
+    background-color: snow;
+    width: 90%;
+    gap: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 2.25vw;
+}
+
+h4 {
+    background-color: thistle;
+    font-size: 2vw;
+}
+
+input {
+    font-size: 1.25vw;
+}
+
+label {
+    font-size: 1.5vw;
+}
+
+select {
+    font-size: 1.25vw;
+}
+
+#btnDiv {
+    text-align: center;
+    padding-top: 2%;
+}
+
+#payBtn {
+    background-color: thistle;
+    font-weight: bold;
+    font-size: 2vw;
+    width: 50%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#payBtn:hover {
+    color: snow;
+    background-color: rgb(122, 84, 122);
+    border-color: darkcyan;
+    transition-duration: .1s;
+}
+
+#payErrorMsg {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+}

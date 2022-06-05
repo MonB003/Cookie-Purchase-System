@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MBsCookies</title>
+    <meta charset="utf-8" />
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style-main.css" />
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <header id="header">
+        <img id="circle-logo" src="./images/logo.jpg" alt="logo" width="100" height="100">
+
+        <h2 id="companyName">MBsCookies</h2>
+
+        <nav id="leftmenu">
+            <form action="/main" method="get" id="homeForm" class="navParent">
+                <input type="submit" id="home" class="nav-items" value="Home" />
+            </form>
+            <form action="/logout" method="get" id="logoutForm">
+                <input type="submit" id="logout" class="nav-items" value="Logout"/>
+            </form>
+        </nav>
+        <nav id="rightmenu">
+            <form action="/order" method="get" id="orderForm">
+                <input type="submit" id="order" class="nav-items" value="Order"/>
+            </form>
+            <a href="" id="help" class="nav-items" onclick="helpInfo()">Help</a>
+        </nav>
+
+    </header>
+
+    <h1 id="customerName"></h1>
+
+    <div id="content">
+        <!-- Place order div -->
+        <div id="innerContent">
+            <h2 id="cookieMsg">Craving cookies?</h2>
+            <form action="/order" method="get">
+                <input type="submit" id="placeOrderBtn" value="Place an Order"/>
+            </form>
+            <br>
+        </div>
+
+        <br><br>
+        
+        <!-- Provide feedback div -->
+        <div id="review">
+            <br>
+            <h2 id="feedbackMsg">Want to give us feedback?</h2>
+            <form action="/review" method="get">
+                <input type="submit" id="reviewBtn" value="Write a Review"/>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Footer -->
+    <footer>
+        <hr />
+        <p id="copyright"> &copy; 2021. Website made by Monica Bacatan.
+        </p>
+    </footer>
+
+
+
+    <script src="./scripts/navbar.js"></script>
+
+</body>
+
+</html>

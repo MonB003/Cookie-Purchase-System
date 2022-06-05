@@ -1,0 +1,267 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+
+body {
+    background-color: rgb(228, 238, 255);
+    font-family: 'Poppins', sans-serif;
+
+    width: auto;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+#header {
+    border-top: 5pt solid white;
+    margin: 0px auto;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: 20% 20% 30% 30%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+#circle-logo {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+
+    width: 30%;
+    height: auto;
+    background: rgb(228, 228, 228);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#companyName {
+    font-size: 2vw;
+    width: 100%;
+    text-align: left;
+    text-shadow: 0 1px 4px #6691e0;
+
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.nav-items {
+    font-size: 1.5vw;
+    color: black;
+    text-align: center;
+}
+
+nav>form {
+    text-align: center;
+}
+
+#leftmenu {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    text-align: center;
+    font-size: 1.5vw;
+
+    display: grid;
+    grid-template-columns: 48% 2% 48%;
+    column-gap: 2%;
+}
+
+#homeForm {
+    grid-column: 1 / span 1;
+}
+
+#logoutForm {
+    grid-column: 3 / span 1;
+}
+
+#home, #logout {
+    background: none;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#rightmenu {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+    text-align: center;
+    font-size: 1.5vw;
+
+    display: grid;
+    grid-template-columns: 48% 2% 48%;
+    column-gap: 2%;
+}
+
+#order {
+    grid-column: 1 / span 1;
+
+    background: none;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+#help {
+    grid-column: 3 / span 1;
+}
+
+#customerName {
+    font-size: 2vw;
+}
+
+#content {
+    text-align: center;
+    height: 50vh;
+}
+
+#innerContent {
+    width: 50%;
+    border-radius: 20px;
+    border: 2px dotted rgb(110, 15, 199);
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(130deg, bisque 60%, rgb(182, 154, 85));
+}
+
+#cookieMsg, #feedbackMsg {
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+#placeOrderBtn {
+    background-color: rgb(82, 248, 157);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+#placeOrderBtn:hover {
+    background-color: rgb(166, 255, 206);
+    border-color: darkcyan;
+    transition-duration: .1s;
+}
+
+#review {
+    background: radial-gradient(#fed6ff, #ae8ce6);
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reviewBtn {
+    background-color: rgb(255, 230, 117);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+#reviewBtn:hover {
+    background-color: rgb(255, 241, 179);
+    border-color: darkorange;
+    transition-duration: .1s;
+}
+
+/* FOOTER */
+footer {
+    min-height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+#copyright {
+    font-size: 1vw;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1280px) and (min-width: 701px) {
+    #header {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 33% 33% 33%;
+    }
+
+    #circle-logo {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+
+        width: 30%;
+        height: 90%;
+    }
+
+    #companyName {
+        text-align: center;
+
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    #leftmenu {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        text-align: right;
+    }
+
+    #rightmenu {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    #header {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 30% 20%;
+    }
+
+    #circle-logo {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+
+        width: 10%;
+        height: 85%;
+    }
+
+    #companyName {
+        text-align: center;
+
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+    }
+
+    #leftmenu {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+    }
+
+    #homeForm {
+        grid-column: 2 / span 1;
+    }
+
+    #logout {
+        grid-column: 3 / span 1;
+    }
+
+    #rightmenu {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+
+        display: grid;
+        grid-template-columns: 25% 25% 50%;
+    }
+
+    #order {
+        grid-column: 1 / span 1;
+    }
+
+    #help {
+        grid-column: 2 / span 1;
+    }
+}

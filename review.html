@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Review</title>
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="./styles/style-review.css">
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <header id="header">
+        <form action="/main" method="get">
+            <input type="submit" id="backToMain" value="Back" />
+        </form>
+    </header>
+
+    <br><br>
+
+    <!-- Review form -->
+    <div id="content">
+        <h3>Review Form</h3>
+        <br>
+
+        <form id="reviewForm">
+            <!-- User info -->
+            <label>Name <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z]{1,30}" maxlength="30" required="required">
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="email" id="email" name="userEmail" placeholder="Email@email.ca" maxlength="30">
+            <br><br><br>
+
+            <label>What did you order? <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <input type="text" id="userOrder" name="userOrder" placeholder="Your Order" maxlength="50" required="required">
+            <br><br>
+
+            <!-- Radio button rating for different categories -->
+            <label for="ratingTable">Food Rating <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <table id="ratingTable">
+                <tr>
+                    <th class="table-head"></th>
+                    <th class="table-head">Excellent</th>
+                    <th class="table-head">Good</th>
+                    <th class="table-head">Adequate</th>
+                    <th class="table-head">Bad</th>
+                    <th class="table-head">Extremely Bad</th>
+                </tr>
+                <tr>
+                    <td class="row-head">Food Quality</td>
+                    <td><input type="radio" id="fq5" name="quality" value="Excellent" /></td>
+                    <td><input type="radio" id="fq4" name="quality" value="Good" /></td>
+                    <td><input type="radio" id="fq3" name="quality" value="Adequate" checked="checked" /></td>
+                    <td><input type="radio" id="fq2" name="quality" value="Bad" /></td>
+                    <td><input type="radio" id="fq1" name="quality" value="Extremely Bad" /></td>
+                </tr>
+                <tr>
+                    <td class="row-head">Flavour & Texture</td>
+                    <td><input type="radio" id="ft5" name="flavour" value="Excellent" /></td>
+                    <td><input type="radio" id="ft4" name="flavour" value="Good" /></td>
+                    <td><input type="radio" id="ft3" name="flavour" value="Adequate" checked="checked" /></td>
+                    <td><input type="radio" id="ft2" name="flavour" value="Bad" /></td>
+                    <td><input type="radio" id="ft1" name="flavour" value="Extremely Bad" /></td>
+                </tr>
+                <tr>
+                    <td class="row-head">Cost</td>
+                    <td><input type="radio" id="c5" name="cost" value="Excellent" /></td>
+                    <td><input type="radio" id="c4" name="cost" value="Good" /></td>
+                    <td><input type="radio" id="c3" name="cost" value="Adequate" checked="checked" /></td>
+                    <td><input type="radio" id="c2" name="cost" value="Bad" /></td>
+                    <td><input type="radio" id="c1" name="cost" value="Extremely Bad" /></td>
+                </tr>
+                <tr>
+                    <td class="row-head">Waiting Time</td>
+                    <td><input type="radio" id="wt5" name="time" value="Excellent" /></td>
+                    <td><input type="radio" id="wt4" name="time" value="Good" /></td>
+                    <td><input type="radio" id="wt3" name="time" value="Adequate" checked="checked" /></td>
+                    <td><input type="radio" id="wt2" name="time" value="Bad" /></td>
+                    <td><input type="radio" id="wt1" name="time" value="Extremely Bad" /></td>
+                </tr>
+                <tr>
+                    <td class="row-head">Presentation</td>
+                    <td><input type="radio" id="p5" name="presentation" value="Excellent" /></td>
+                    <td><input type="radio" id="p4" name="presentation" value="Good" /></td>
+                    <td><input type="radio" id="p3" name="presentation" value="Adequate" checked="checked" /></td>
+                    <td><input type="radio" id="p2" name="presentation" value="Bad" /></td>
+                    <td><input type="radio" id="p1" name="presentation" value="Extremely Bad" /></td>
+                </tr>
+                <tr>
+                    <td class="row-head">Service</td>
+                    <td><input type="radio" id="s5" name="service" value="Excellent" /></td>
+                    <td><input type="radio" id="s4" name="service" value="Good" /></td>
+                    <td><input type="radio" id="s3" name="service" value="Adequate" checked="checked" /></td>
+                    <td><input type="radio" id="s2" name="service" value="Bad" /></td>
+                    <td><input type="radio" id="s1" name="service" value="Extremely Bad" /></td>
+                </tr>
+            </table>
+            <br><br>
+
+            <!-- Improvent and comments feedback -->
+            <label for="improvement">What can we improve on?</label>
+            <br>
+            <textarea id="improvements" placeholder="Improvement feedback" maxlength="500"></textarea>
+            <br><br>
+            <label for="comments">Additional Comments</label>
+            <br>
+            <textarea id="comments" placeholder="Questions, comments, or concerns" maxlength="500"></textarea>
+            <br><br>
+            <label><input type="checkbox" id="recommend" name="recommend" />I would recommend MBsCookies to other
+                people.</label>
+            <br><br>
+
+            <button type="button" id="submitReviewBtn" onclick="submitReview()">Submit</button>
+            <br>
+            <p id="reviewErrMsg"></p>
+        </form>
+    </div>
+
+
+
+    <script src="./scripts/clientReview.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
+
+body {
+    background-color: rgb(228, 238, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+#header {
+    border-top: 2pt solid white;
+    border-bottom: 2pt solid white;
+    margin: 0px auto;
+    background-color: white;
+}
+
+#backToMain {
+    background: none;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2.25vw;
+}
+
+.star {
+    color: red;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border: 1px solid black;
+    width: 70%;
+    height: 90%;
+}
+
+th, .row-head {
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+td {
+    border-top: 1px solid black;
+}
+
+.row-head {
+    border-right: 1px solid black;
+}
+
+input {
+    font-size: 1.25vw;
+}
+
+label {
+    font-size: 1.5vw;
+}
+
+input[type=radio], input[type=checkbox] {
+    cursor: pointer;
+}
+
+input[type=text], input[type=email], textarea {
+    background-color: rgb(250, 250, 234);
+    border: 2px groove rgb(82, 9, 150);
+    font-size: 1.25vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+    width: 50%;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25vw;
+}
+
+
+#submitReviewBtn {
+    background-color: rgb(255, 230, 117);
+    border-color: darkorange;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+#submitReviewBtn:hover {
+    background-color: rgb(255, 241, 179);
+    transition-duration: .1s;
+}
+
+#reviewErrMsg {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+}

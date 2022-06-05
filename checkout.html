@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order Payment</title>
+    <meta charset="utf-8" />
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style-checkout.css" />
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <header id="header">
+        <nav id="navbar">
+            <form action="/main" method="get" class="navParent">
+                <input type="submit" id="home" class="nav-items" value="Home"/>
+            </form>
+            <form action="/logout" method="get" class="navParent">
+                <input type="submit" id="logout" class="nav-items" value="Logout"/>
+            </form>
+            <div class="navParent">
+                <a href="#" id="help" class="nav-items" onclick="howToCheckout()">Help</a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <br>
+
+    <div id="content">
+        <!-- Payment info form -->
+        <form id="paymentForm">
+            <h3>Payment</h3>
+
+            <div class="userInfo">
+                <h4>First Name</h4>
+                <br>
+                <input type="text" id="userName" class="checkout-input" name="userName" placeholder="First Name" pattern="[A-Za-z]{1,50}"
+                    required="required">
+            </div>
+
+            <div class="userInfo">
+                <h4>Email</h4>
+                <input type="email" id="userEmail" class="checkout-input" name="userEmail" placeholder="email@email.ca" required="required">
+            </div>
+
+            <div class="userInfo">
+                <h4>Card Information</h4>
+                <label for="cardNum">Card Number</label>
+                <br>
+                <input type="text" id="cardNum" class="checkout-input" name="cardNum" placeholder="1234-1234-1234-1234" maxlength="19" required="required">
+                <br><br>
+                <label for="expiryMonth">Expiry Month</label>
+                <br>
+                <select name="expiryMonth" id="expiryMonth" class="checkout-input">
+                    <option value="january" selected="selected">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                <br><br>
+                <label for="expiryYear">Expiry Year</label>
+                <br>
+                <input type="number" id="expiryYear" class="checkout-input" name="expiryYear" placeholder="2022" pattern="^[0-9]{4}" min="2022" max="3000" required="required">
+                <br><br>
+                <label for="cardCvv">CVV</label>
+                <br>
+                <input type="number" id="cardCvv" class="checkout-input" name="cardCvv" placeholder="123" pattern="^[0-9]{3}" min="100" max="999" required="required">
+            </div>
+
+            <div id="btnDiv">
+                <button type="button" id="payBtn" onclick="payAndCheckout()">Pay</button>
+                <br>
+                <p id="payErrorMsg"></p>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <script src="./scripts/clientCheckout.js"></script>
+    <script src="./scripts/navbar.js"></script>
+
+</body>
+
+</html>

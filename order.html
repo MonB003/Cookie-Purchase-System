@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order</title>
+    <meta charset="utf-8" />
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style-order.css" />
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <header id="header">
+        <nav id="navbar">
+            <form action="/main" method="get" class="navParent">
+                <input type="submit" id="home" class="nav-items" value="Home" />
+            </form>
+            <form action="/logout" method="get" class="navParent">
+                <input type="submit" id="logout" class="nav-items" value="Logout" />
+            </form>
+            <div class="navParent">
+                <a href="" id="help" class="nav-items" onclick="howToOrder()">Help</a>
+            </div>
+        </nav>
+    </header>
+
+    <br><br>
+
+    <div id="content">
+
+        <!-- Order details -->
+        <div id="orderDiv">
+            <h3 id="orderHeading">Order Info</h3>
+            <form>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Email@email.ca" maxlength="30" required="required">
+                <br><br>
+
+                <!-- Cookies Flavour -->
+                <h4>Cookie Flavours</h4>
+                <div id="flavoursDiv">
+                    <form>
+                        <input type="checkbox" id="chocolateChip" name="chocolateChip" value="Chocolate Chip">
+                        <label for="chocolateChip">Chocolate Chip</label><br>
+                        <input type="checkbox" id="whiteChocolate" name="whiteChocolate" value="White Chocolate">
+                        <label for="whiteChocolate">White Chocolate</label><br>
+                        <input type="checkbox" id="peanutButter" name="peanutButter" value="Peanut Butter">
+                        <label for="peanutButter">Peanut Butter</label><br>
+                        <input type="checkbox" id="oatmealRaisin" name="oatmealRaisin" value="Oatmeal Raisin">
+                        <label for="oatmealRaisin">Oatmeal Raisin</label><br>
+                        <input type="checkbox" id="banana" name="banana" value="Banana">
+                        <label for="banana">Banana</label><br>
+                        <input type="checkbox" id="lemon" name="lemon" value="Lemon">
+                        <label for="lemon">Lemon</label><br>
+                        <input type="checkbox" id="almond" name="almond" value="Almond">
+                        <label for="almond">Almond</label>
+                    </form>
+                </div>
+
+                <br><br>
+
+                <!-- Quantity -->
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1" value="1"
+                    required="required">
+
+                <br><br>
+
+                <!-- Buttons -->
+                <div id="btnsDiv">
+                    <button id="addItemBtn" onclick="prepOrderInfo()">Add to Order</button>
+                    <button id="checkoutBtn" onclick="placeOrder()" disabled="disabled">Checkout</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Display user's order -->
+        <div id="display">
+            <h3 id="yourOrderHeading">Your Order:</h3>
+            <h4 id="cookiesArray">Empty</h4>
+
+            <h3>Subtotal: $<span id="subtotal">0</span> </h3>
+        </div>
+
+    </div>
+
+
+
+    <script src="./scripts/clientOrder.js"></script>
+    <script src="./scripts/order.js"></script>
+    <script src="./scripts/navbar.js"></script>
+
+</body>
+
+</html>
