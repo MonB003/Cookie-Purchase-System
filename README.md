@@ -32,7 +32,7 @@ You will need to install:
 Cloning the repository:
 - Open Command Prompt 
 - `cd` into the folder you want the repository stored in
-- Type: `git clone https://github.com/MonB2020/Cookie-Purchase-System.git`
+- Type: `git clone https://github.com/MonB003/Cookie-Purchase-System.git`
 
 In your folder, you will need to install these node packages:
 ```
